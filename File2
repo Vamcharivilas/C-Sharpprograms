@@ -1,0 +1,187 @@
+//program to print 1-10 Numbers?
+Console.WriteLine("using for loop:");
+for (int i = 1; i <= 10; i++)
+{
+    Console.WriteLine(i);
+}
+Console.WriteLine("+++++++++++++++++");
+Console.WriteLine("using while");
+int l = 1;
+while (l <= 10)
+{
+    Console.WriteLine(l);
+    l++;
+}
+Console.WriteLine("+++++++++++++++++");
+Console.WriteLine("using do-while");
+int j = 1;
+do
+{
+    Console.WriteLine(j);
+    j++;
+}while(j<=10);
+_________________________________________________//program to print 10-1 Numbers?
+Console.WriteLine("using for loop:");
+for (int i = 10; i >= 1; i--)
+{
+    Console.WriteLine(i);
+}
+Console.WriteLine("+++++++++++++++++");
+Console.WriteLine("using while");
+int l = 10;
+while (l >= 1)
+{
+    Console.WriteLine(l);
+    l--;
+}
+Console.WriteLine("+++++++++++++++++");
+Console.WriteLine("using do-while");
+int j = 10;
+do
+{
+    Console.WriteLine(j);
+    j--;
+}while(j>=1);
+_________________________________________________//program to print 10 to -10 Numbers?
+Console.WriteLine("using for loop:");
+for (int i = 10; i >= -10; i--)
+{
+    Console.WriteLine(i);
+}
+Console.WriteLine("+++++++++++++++++");
+Console.WriteLine("using while");
+int l = 10;
+while (l >= -10)
+{
+    Console.WriteLine(l);
+    l--;
+}
+Console.WriteLine("+++++++++++++++++");
+
+
+
+Console.WriteLine("using do-while");
+int j = 10;
+do
+{
+    Console.WriteLine(j);
+    j--;
+}while(j>=-10);
+
+_________________________________________________//program to print Numbers upto given Number?
+Console.Write("Enter any Number:");
+int a=int.Parse(Console.ReadLine());   
+Console.WriteLine("using for");
+for (int i = 1; i <= a; i++)
+{
+    Console.WriteLine(i);
+}
+Console.WriteLine("+++++++++++++++++");
+Console.WriteLine("using while");
+int l = 1;
+while (l <= a)
+{
+    Console.WriteLine(l);
+    l++;
+}
+Console.WriteLine("+++++++++++++++++");
+Console.WriteLine("using do-while");
+int j = 1;
+do
+{
+    Console.WriteLine(j);
+    j++;
+} while (j <=a);
+_______________________________________________
+//program to print even Numbers upto given Number?
+Console.Write("Enter any Number to get even numbers upto the Number:");
+int a=int.Parse(Console.ReadLine());   
+
+for (int i = 1; i <= a; i++)
+{
+    if (i % 2 == 0) { Console.WriteLine(i); }
+}
+_________________________________________________
+//program to print odd Numbers upto given Number?
+Console.Write("Enter any Number to get odd numbers upto the Number:");
+int a=int.Parse(Console.ReadLine());   
+
+for (int i = 1; i <= a; i++)
+{
+    if (i % 2 == 1) { Console.WriteLine(i); }
+}
+_________________________________________________
+//program to print sumof Numbers upto given Number?
+Console.Write("Enter any Number:");
+int a = int.Parse(Console.ReadLine());
+int sum = 0;
+for (int i = 1; i <= a; i++)
+{
+    Console.WriteLine(i);
+    sum += i;
+}
+Console.WriteLine("SUM of given NUMBER :"+sum);
+//program to print even Numbers and sum ofevenNumbers upto given Number?
+Console.Write("Enter any Number to get even numbers upto the Number:");
+int a = int.Parse(Console.ReadLine());
+int sum_eve = 0 ;
+for (int i = 1; i <= a; i++)
+{
+    if (i % 2 == 0) {
+        Console.WriteLine(i);
+        sum_eve +=i;
+    }
+}
+
+Console.WriteLine("SUM ofevenNumbers upto given Number :" + sum_eve);
+________________________________________________
+//program to print Odd Numbers and sum ofevenNumbers upto given Number?
+Console.Write("Enter any Number to get odd numbers upto the Number:");
+int a = int.Parse(Console.ReadLine());
+int sum_od = 0 ;
+for (int i = 1; i <= a; i++)
+{
+    if (i % 2 == 1) {
+        Console.WriteLine(i);
+        sum_od +=i;
+    }
+}
+
+Console.WriteLine("SUM ofODDNumbers upto given Number :" + sum_od);
+_________________________________________________
+/*program to print Even Numbers and sum ofevenNumbers upto given Number?
+ * also print No of even No(Count)*/
+Console.Write("Enter any Number to get even numbers upto the Number:");
+int a = int.Parse(Console.ReadLine());
+int sum_eve = 0 ;
+int ev_count=0 ;
+for (int i = 1; i <= a; i++)
+{
+    if (i % 2 == 0) {
+        Console.WriteLine(i);
+        ev_count++;
+        sum_eve +=i;
+    }
+}
+
+Console.WriteLine("SUM ofEVENNumbers upto given Number :" + sum_eve);
+Console.WriteLine("The No.of EvenNumbers:"+ev_count);
+_________________________________________________
+/*program to print Odd Numbers and sum ofoddNumbers upto given Number?
+ * also print No of odd No(Count)*/
+Console.Write("Enter any Number to get odd numbers upto the Number:");
+int a = int.Parse(Console.ReadLine());
+int sum_od = 0 ;
+int od_count=0 ;
+for (int i = 1; i <= a; i++)
+{
+    if (i % 2 == 1) {
+        Console.WriteLine(i);
+        od_count++;
+        sum_od +=i;
+    }
+}
+Console.WriteLine("SUM ofODDNumbers upto given Number :" + sum_od);
+Console.WriteLine("The No.of OddNumbers:"+od_count);
+________________________________________________
+
