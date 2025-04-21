@@ -1,0 +1,86 @@
+//Program to accept a Number and Print whether it is even no or odd no
+Console.WriteLine("Enter the Number to check whether the Number is even or odd");
+int num =int.Parse(Console.ReadLine());
+if (num%2==0)
+{
+    Console.WriteLine("Given Number is Even");
+}
+else
+{
+    Console.WriteLine("Given Number is Odd");
+}
+______________________________________________________
+//Program  to accept a year and Print Whether it is leap year or not
+using System.Xml;
+
+Console.WriteLine("Enter a year to check wheather it is leapyear or not");
+int year = int.Parse(Console.ReadLine());
+if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+{
+    Console.WriteLine(year+"is a leap year");
+}
+else Console.WriteLine(year+"is not a Leap year");
+_________________________________________________________________
+//Program to find out a person is eligible to vote or not
+Console.WriteLine("Enter Age to check eligiblity for Vote:");
+int age = int.Parse(Console.ReadLine());
+if(age >= 18)
+{
+    Console.WriteLine(" A person is eligiblity for Voting");
+}
+else Console.WriteLine("A person is not eligiblity for Voting");
+______________________________________________________________________
+// Write a program to check whether the given is /positive or /Negative.
+Console.WriteLine("Enter the Number to check Positive or Negative ");
+int Num = int.Parse(Console.ReadLine());
+if (Num> 0)
+{
+    Console.WriteLine(Num+"Positive Number");
+}
+else if (Num == 0)
+{
+    Console.WriteLine(Num+"ZERO");
+}
+else Console.WriteLine(Num+"Negative Number");
+_________________________________________________
+//Write a Program to find Sum of two Numbers
+//only if the give are of three Digit Number
+Console.WriteLine("Enter the FirstNo");
+int fn = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter the SecondNo");
+int sn=int.Parse(Console.ReadLine());
+if (fn >= 100 && fn <= 999 && sn >= 100 && sn <= 999) {
+    int sum = fn + sn;
+    Console.WriteLine("Sum of the given 3Digits Number:" + sum);
+}
+else Console.WriteLine("TO Get Sum enter only 3Digit Numbers");
+_________________________________________________________________
+//Write a Program Print given number is  Single digit or not
+Console.WriteLine("Enter the Number");
+int num = int.Parse(Console.ReadLine());
+
+if (num >=0 && num<= 9 ) {
+    
+    Console.WriteLine(" given is a SingleDigit Number:" + num);
+}
+else Console.WriteLine(" given is not a SingleDigit Number"+num);
+_______________________________________________________________________
+//Write a Program to swap two varibles
+Console.WriteLine("Enter the a value");
+int a = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter the b value");
+int b = int.Parse(Console.ReadLine());
+Console.WriteLine("before swap : a="+a+"b="+b);
+a = a + b;
+b = a - b;
+a = a - b;
+Console.WriteLine(" After  swap :a="+a+"b="+ b);
+
+output:
+Enter the a value
+30
+Enter the b value
+40
+before swap : a=30b=40
+ After  swap :a=40b=30
+______________________________________________________________________
