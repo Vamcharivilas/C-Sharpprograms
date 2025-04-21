@@ -1,0 +1,193 @@
+/* Program to accept 5 subject marks of n number of students and calculate their 
+  total,average,result(pass/fail) .Also print number of students attended,number of students Passed,
+  number of students failed. */
+int i = 1;
+int pass_cnt = 0, fail_cnt = 0;
+while (true)
+{
+    Console.WriteLine("Enter student " + i + " details :");
+    string result, grade;
+    bool validInput = true;
+
+    Console.Write("Enter Telugu marks :");
+    int tel = int.Parse(Console.ReadLine());
+    if (!(tel >= 0 && tel <= 100))
+    {
+        Console.WriteLine("Telugu marks should be in between 0-100 !");
+        validInput = false;
+    }
+
+    if (validInput)
+    {
+        Console.Write("Enter Hindi marks :");
+        int hin = int.Parse(Console.ReadLine());
+        if (!(hin >= 0 && hin <= 100))
+        {
+            Console.WriteLine("Hindi marks should be in between 0-100 !");
+            validInput = false;
+        }
+
+        if (validInput)
+        {
+            Console.Write("Enter English marks :");
+            int eng = int.Parse(Console.ReadLine());
+            if (!(eng >= 0 && eng <= 100))
+            {
+                Console.WriteLine("English marks should be in between 0-100 !");
+                validInput = false;
+            }
+
+            if (validInput)
+            {
+                Console.Write("Enter Maths marks :");
+                int mat = int.Parse(Console.ReadLine());
+                if (!(mat >= 0 && mat <= 100))
+                {
+                    Console.WriteLine("Maths marks should be in between 0-100 !");
+                    validInput = false;
+                }
+
+                if (validInput)
+                {
+                    Console.Write("Enter Science marks :");
+                    int sci = int.Parse(Console.ReadLine());
+                    if (!(sci >= 0 && sci <= 100))
+                    {
+                        Console.WriteLine("Science marks should be in between 0-100 !");
+                        validInput = false;
+                    }
+
+                    if (validInput)
+                    {
+                        int tot = tel + hin + eng + mat + sci;
+                        float avg = tot / 5.0f;
+                        //calculating result
+                        if (tel >= 35 && hin >= 35 && eng >= 35 && mat >= 35 && sci >= 35)
+                        {
+                            result = "pass";
+                            pass_cnt++;
+                            //calculating grade
+                            if (avg >= 90)
+                                grade = "A grade ";
+                            else if (avg >= 80)
+                                grade = "B grade ";
+                            else if (avg >= 70)
+                                grade = "C grade ";
+                            else
+                                grade = "D grade ";
+                        }
+                        else
+                        {
+                            result = "fail";
+                            fail_cnt++;
+                            grade = "NO GRADE ";
+                        }
+
+                        Console.WriteLine("Total marks = " + tot);
+                        Console.WriteLine("Average marks = " + avg);
+                        Console.WriteLine("Result = " + result);
+                        Console.WriteLine("Grade = " + grade);
+
+                        Console.WriteLine("Do you want to calculate another student result ( y/n ) ? : ");
+                        char choice = char.Parse(Console.ReadLine());
+                        if (choice == 'y')
+                        {
+                            i++;
+                            continue;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Total student = " + i);
+                            Console.WriteLine("Total passed student = " + pass_cnt);
+                            Console.WriteLine("Total failed student = " + fail_cnt);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    continue;
+}
+_______________________________________________________________________________________________________
+
+
+float total_bill = 0;
+char choice;
+Console.WriteLine("Welcome to VASU F00d");
+do
+{   
+    Console.WriteLine("  Menu Card :");
+    Console.WriteLine("1. Masala Dosa Rs=80/-");
+    Console.WriteLine("2. Mysore Bonda Rs=60/-");
+    Console.WriteLine("3. Uttapam   Rs=90/-");
+    Console.WriteLine("4. Idli       Rs=50/-");
+    Console.WriteLine("5. Vada       Rs=90/-");
+    Console.WriteLine("6. Display Total Bill");
+    Console.Write("Enter your choice (1-6): ");
+    int menu_choice = int.Parse(Console.ReadLine());
+    int No_plates = 0;
+    if (menu_choice >= 1 && menu_choice <= 5)
+    {
+        Console.Write("Enter No_Plates: ");
+        No_plates = int.Parse(Console.ReadLine());
+    }
+    switch (menu_choice)
+    {
+        case 1:
+            total_bill += 80 * No_plates;
+            Console.WriteLine("Added Masala Dosa " + No_plates + " plates");
+            break;
+        case 2:
+            total_bill += 60 * No_plates;
+            Console.WriteLine("Added Mysore Bonda " + No_plates + " plates");
+            break;
+        case 3:
+            total_bill += 90 * No_plates;
+            Console.WriteLine("Added Uttapam " + No_plates + " plates");
+            break;
+        case 4:
+            total_bill += 50 * No_plates;
+            Console.WriteLine("Added Idli " + No_plates + " plates");
+            break;
+        case 5:
+            total_bill += 90 * No_plates;
+            Console.WriteLine("Added Vada " + No_plates + " plates");
+            break;
+        case 6:
+            // Calculate taxes
+            float sgst = total_bill * 0.02f;
+            float cgst = total_bill * 0.02f;
+            float final_amount = total_bill + sgst + cgst;
+
+            Console.WriteLine("\n    Bill Details  ");
+            Console.WriteLine("------------------------");
+            Console.WriteLine("Subtotal Amount: Rs. " + total_bill);
+            Console.WriteLine("SGST (2%): Rs. " + sgst);
+            Console.WriteLine("CGST (2%): Rs. " + cgst);
+            Console.WriteLine("------------------------");
+            Console.WriteLine("Total Amount: Rs. " + final_amount);
+            return;
+        default:
+            Console.WriteLine("Invalid choice! Please select again.");
+            break;
+    }
+    Console.Write("\nDo you want to order more items? (y/n): ");
+    choice = char.ToLower(Console.ReadKey().KeyChar);
+    Console.WriteLine();
+} while (choice == 'y');
+
+// Calculate taxes
+float sgst_amount = total_bill * 0.02f;
+float cgst_amount = total_bill * 0.02f;
+float final_bill = total_bill + sgst_amount + cgst_amount;
+
+Console.WriteLine("    Final Bill    ");
+Console.WriteLine("------------------------");
+Console.WriteLine("Subtotal Amount: Rs. " + total_bill);
+Console.WriteLine("SGST (2%): Rs. " + sgst_amount);
+Console.WriteLine("CGST (2%): Rs. " + cgst_amount);
+Console.WriteLine("------------------------");
+Console.WriteLine("Total Amount: Rs. " + final_bill);
+Console.WriteLine(" THANK YOU :)");
+
