@@ -1,0 +1,87 @@
+/*program to print squares of numbers upto given Number*/
+Console.Write("ENTER Any Number To Get Squares upto the Number:");
+int sq = int.Parse(Console.ReadLine());
+for (int i = 0; i <=sq; i++)
+Console.WriteLine(i*i);
+________________________________________________________________________________
+/*program to print Cubes of numbers upto given Number*/
+Console.Write("ENTER Any Number To Get Cubes upto the Number:");
+int cq = int.Parse(Console.ReadLine());
+for (int i = 0; i <=cq; i++)
+Console.WriteLine(i*i*i);
+__________________________________________________________________________________
+
+/*program to print MULTIPLULIICATION table of given Number*/
+Console.Write("ENTER Any Number To Get Multiplulication of the table:");
+int i = int.Parse(Console.ReadLine());
+    Console.WriteLine(i + "table:");
+    Console.WriteLine("__________");
+    for (int j = 1; j <= 10; j++)
+        Console.WriteLine(i + "*" + j + " =" + i * j);
+    Console.WriteLine();
+
+_________________________________________________________________________________
+/*program to print MULTIPLULIICATION table of upto given Number*/
+Console.Write("ENTER Any Number To Get Multiplulication of the table:");
+int t = int.Parse(Console.ReadLine());
+for (int i = 1; i <=t; i++)
+{
+    Console.WriteLine(i + "table:");
+    Console.WriteLine("__________");
+    for (int j = 1; j <=10; j++)
+        Console.WriteLine(i + "*" + j + " =" + i * j);
+    Console.WriteLine();
+}
+____________________________________________________________________________________
+// program to print given number is prime or not 
+Console.Write("given number to check is prime or not :");
+int num = int.Parse(Console.ReadLine());
+int count = 0, i = 2;
+while (i <= num / 2)
+{
+    if (num % i == 0)
+    {
+        count++;
+    }
+    i++;
+}
+if (count == 0)
+    Console.WriteLine(num + "is a prime");
+else
+    Console.WriteLine(num+ "is not a prime");
+_______________________________________________________________________________________
+//program to print prime numbers upto given number
+Console.Write("Enter Number to find prime numbers upto the given: ");
+int upto = int.Parse(Console.ReadLine());
+
+Console.WriteLine($"Prime numbers up to {upto} are:");
+if (upto >= 2)
+{
+    Console.WriteLine("2 ");
+}
+for (int num = 3; num <= upto; num++)
+{
+    bool isPrime = true;
+    for (int i = 2; i <= num / 2; i++)
+    {
+        if (num % i == 0)
+        {
+            isPrime = false;
+            break;
+        }
+    }
+    if (isPrime)
+    { 
+        Console.WriteLine(num);
+    }
+}
+Console.WriteLine(); 
+________________________________________________________________________________________________
+//program to findout factorial of given 
+Console.Write("Enter any Number to find factorial:");
+int n = int.Parse(Console.ReadLine());
+int fact = 1;
+for(int i = 1; i <= n; i++)
+    fact = fact * i;//fact*=i;
+Console.WriteLine("Factorial of a Given Number"+ n+"is:"+fact);
+_________________________________________________________________________________________________
