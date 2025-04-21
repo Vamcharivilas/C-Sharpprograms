@@ -1,0 +1,62 @@
+//Write a Program to find Sum of two Numbers
+//only if the give are of three Digit Number
+Console.WriteLine("Enter the FirstNo");
+int fn = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter the SecondNo");
+int sn = int.Parse(Console.ReadLine());
+if ((fn >= 100 && fn <= 999 || fn <= -100 && fn >= -999) &&
+    (sn >= 100 && sn <= 999 || sn <= -100 && sn >= -999))
+{
+    {
+        int sum = fn + sn;
+        Console.WriteLine("Sum of the given 3Digits Number:" + sum);
+    }
+}
+else Console.WriteLine("TO Get Sum enter only 3Digit Numbers");
+____________________________________________________________________
+//Write a Program Print given number is  Single digit or not
+Console.WriteLine("Enter the Number");
+int num = int.Parse(Console.ReadLine());
+
+if ((num >= 0 && num <= 9) || (num >= -9 && num <= -1))
+{
+
+    Console.WriteLine(" given is a SingleDigit Number:" + num);
+}
+else Console.WriteLine(" given is not a SingleDigit Number" + num);
+_____________________________________________________________________
+/*program to generate sales bill read purchase amount from user and provide discount as below
+provide discount 50 % for minimum 25000 purchase
+provide discount 22 % for minimum 15000 purchase
+provide discount 10 % for minimum 5000 purchase
+for others no discount*/
+float disc_amt, bill;
+int disc;
+Console.WriteLine("Enter purchase amount :");
+float pur_amt = float.Parse(Console.ReadLine());
+if (pur_amt >= 25000)
+{
+    disc_amt = pur_amt * 50 / 100;
+    disc = 50;
+}
+else if(pur_amt>=15000)
+{
+    disc_amt = pur_amt * 22 / 100;
+    disc = 22;
+}
+else if (pur_amt >= 5000)
+{
+    disc_amt = pur_amt * 10 / 100;
+    disc = 10;
+}
+else
+{
+    disc_amt = pur_amt * 1 / 100;
+    disc = 1;
+}
+
+    bill = pur_amt - disc_amt;
+Console.WriteLine("Purchase amount :" + pur_amt);
+Console.WriteLine("you got " + disc + "% as discount  ");
+Console.WriteLine("Discount amount  :" + disc_amt);
+Console.WriteLine("Bill :  " + bill);
